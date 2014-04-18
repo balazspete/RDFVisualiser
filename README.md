@@ -12,5 +12,5 @@ Specify a URI and the application will dereference the resource and present the 
 
 #### Dependencies
 * [AFNetworking](https://github.com/AFNetworking/AFNetworking) handled by Cocoapods
-* [Redland-ObjC](https://github.com/p2/Redland-ObjC), modified version for Apple's A7 processor found in [ba;azspete/Redland-ObjC](https://github.com/balazspete/Redland-ObjC)
+* [Redland-ObjC](https://github.com/p2/Redland-ObjC), modified version for Apple's A7 processor found in [balazspete/Redland-ObjC](https://github.com/balazspete/Redland-ObjC)
 
