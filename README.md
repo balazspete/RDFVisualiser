@@ -3,11 +3,11 @@ RDFVisualiser
 
 A tool to discover and visualise Semantic Web resources
 
+Specify a URI and the application will dereference the resource and present the links and values in a table view. Navigate to other nodes by tapping on the table entry.
 
-#### Functionality (and to-do's)
-* [x] Dereference a SW resource
-* [x] Present resource in a table view
-* [ ] Nagivation of crawled graph
-* [ ] Graphical presentation of crawled graph
+#### to-do's
+* [ ] Check whether URI is a valid resource
+* [ ] Backwards nagivation of crawled graph
+* [ ] Graphical presentation of crawled graph and overview
 
 
