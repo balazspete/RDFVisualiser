@@ -23,6 +23,8 @@
 		E8458D6A18FDB0CC0027F930 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8458D4E18FDB0CC0027F930 /* CoreData.framework */; };
 		E8458D7218FDB0CC0027F930 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E8458D7018FDB0CC0027F930 /* InfoPlist.strings */; };
 		E8458D7418FDB0CC0027F930 /* RDFVisualiserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E8458D7318FDB0CC0027F930 /* RDFVisualiserTests.m */; };
+		E8AB2CD3191EF088001C02B0 /* back-512.png in Resources */ = {isa = PBXBuildFile; fileRef = E8AB2CD1191EF088001C02B0 /* back-512.png */; };
+		E8AB2CD4191EF088001C02B0 /* forward-512.png in Resources */ = {isa = PBXBuildFile; fileRef = E8AB2CD2191EF088001C02B0 /* forward-512.png */; };
 		E8C1500018FDB19700EECFAC /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C14FFF18FDB19700EECFAC /* libsqlite3.dylib */; };
 		E8C1500218FDB19E00EECFAC /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C1500118FDB19E00EECFAC /* libxml2.dylib */; };
 		E8C1500318FDB1A400EECFAC /* libredland-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C14FFC18FDB14000EECFAC /* libredland-ios.a */; };
@@ -92,6 +94,8 @@
 		E8458D6F18FDB0CC0027F930 /* RDFVisualiserTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RDFVisualiserTests-Info.plist"; sourceTree = "<group>"; };
 		E8458D7118FDB0CC0027F930 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E8458D7318FDB0CC0027F930 /* RDFVisualiserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RDFVisualiserTests.m; sourceTree = "<group>"; };
+		E8AB2CD1191EF088001C02B0 /* back-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-512.png"; path = "Assets/back-512.png"; sourceTree = "<group>"; };
+		E8AB2CD2191EF088001C02B0 /* forward-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "forward-512.png"; path = "Assets/forward-512.png"; sourceTree = "<group>"; };
 		E8C14FEC18FDB13F00EECFAC /* Redland.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Redland.xcodeproj; path = "../Redland-ObjC/Redland.xcodeproj"; sourceTree = "<group>"; };
 		E8C14FFF18FDB19700EECFAC /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E8C1500118FDB19E00EECFAC /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -175,6 +179,7 @@
 		E8458D5018FDB0CC0027F930 /* RDFVisualiser */ = {
 			isa = PBXGroup;
 			children = (
+				E8AB2CC8191EF040001C02B0 /* Assets */,
 				E8458D5918FDB0CC0027F930 /* ELIAppDelegate.h */,
 				E8458D5A18FDB0CC0027F930 /* ELIAppDelegate.m */,
 				E8458D5F18FDB0CC0027F930 /* Images.xcassets */,
@@ -216,6 +221,15 @@
 				E8458D7018FDB0CC0027F930 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E8AB2CC8191EF040001C02B0 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E8AB2CD1191EF088001C02B0 /* back-512.png */,
+				E8AB2CD2191EF088001C02B0 /* forward-512.png */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 		E8C14FED18FDB13F00EECFAC /* Products */ = {
@@ -380,7 +394,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8AB2CD4191EF088001C02B0 /* forward-512.png in Resources */,
 				E8C1500518FDB1B800EECFAC /* Main.storyboard in Resources */,
+				E8AB2CD3191EF088001C02B0 /* back-512.png in Resources */,
 				E8458D5518FDB0CC0027F930 /* InfoPlist.strings in Resources */,
 				E8458D6018FDB0CC0027F930 /* Images.xcassets in Resources */,
 			);

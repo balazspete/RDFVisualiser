@@ -32,6 +32,7 @@
 
 @property NSMutableArray *results;
 @property NSURL *url;
+@property BOOL loading;
 
 @end
 
@@ -49,6 +50,9 @@
     
     self.results = [[NSMutableArray alloc] init];
     [self.goButton addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didPressGoButton:)]];
+    
+    [self.navigationView setTranslucent:YES];
+    [self.navigationView setBackgroundColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:0.6]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -181,8 +185,20 @@
 
 - (void)getURI
 {
+    if (self.loading)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Loading"
+                                                        message:@"Currently loading another resource."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
+    
+    self.loading = YES;
     self.url = [[NSURL alloc] initWithString:self.uriField.text];
-    [self.loadingLabel setHidden:NO];
+    [self.progressView setProgress:0.1];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
@@ -196,6 +212,8 @@
         [self displayRDF:responseObject];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"%@", error);
+        [self.progressView setProgress:0];
+        self.loading = NO;
     }];
     
     [operation start];
@@ -203,6 +221,7 @@
 
 - (void)displayRDF:(RedlandModel*)model
 {
+    [self.progressView setProgress:0.5];
     RedlandNode *node = [RedlandNode nodeWithURIString:[self.url absoluteString]];
     
     NSString *queryString = @"SELECT * WHERE {?a ?predicate ?value}";
@@ -213,6 +232,7 @@
     
     [self.results removeAllObjects];
     
+    [self.progressView setProgress:0.75];
     
     while (true)
     {
@@ -230,7 +250,14 @@
     }
     
     [self.tableView reloadData];
-    [self.loadingLabel setHidden:YES];
+    [self.progressView setProgress:1];
+    
+    self.loading = NO;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return self.navigationView.frame.size.height;
 }
 
 
