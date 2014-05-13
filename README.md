@@ -2,3 +2,15 @@ RDFVisualiser
 =============
 
 A tool to discover and visualise Semantic Web resources
+
+Specify a URI and the application will dereference the resource and present the links and values in a table view. Navigate to other nodes by tapping on the table entry.
+
+#### to-do's
+* [ ] Check whether URI is a valid resource
+* [ ] Backwards nagivation of crawled graph
+* [ ] Graphical presentation of crawled graph and overview
+
+#### Dependencies
+* [AFNetworking](https://github.com/AFNetworking/AFNetworking) handled by Cocoapods
+* [Redland-ObjC](https://github.com/p2/Redland-ObjC), modified version for Apple's A7 processor found in [balazspete/Redland-ObjC](https://github.com/balazspete/Redland-ObjC)
+
